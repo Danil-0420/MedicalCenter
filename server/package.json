@@ -4,7 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom --coverage",
+    "test:watch": "yarn test -- --watch",
+    "test:watchAll": "yarn test -- --watchAll",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build; sw-precache --config=sw-precache-config.json --root=build",
+    "deploy": "gh-pages -d build",
+    "report:coverage": "codeclimate-test-reporter < coverage/lcov.info",
+    "storybook": "start-storybook -s public",
+    "build-storybook": "build-storybook -s public",
+    "lint": "stylelint \"src/**/*.css\""
   },
   "keywords": [],
   "author": "",
