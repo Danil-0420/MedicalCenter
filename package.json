@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express-fileupload": "^1.4.0",
+    "mysql2": "^3.2.0"
+  }
+}
